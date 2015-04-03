@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 			}, //end of watch scripts
 
 			css : {
-				files : ['sass/**/*.scss'],
+				files : ['sass/**/*.scss','!.sass-cache'],
 				tasks : ['sass', 'autoprefixer', 'penthouse'],
 				options : {
 					spawn : false,

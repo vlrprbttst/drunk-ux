@@ -14,13 +14,65 @@ html {
 body {
   @include reset;
   background:#fff;
+  font-family: $font;
+  text-shadow: 0 1px 0 #fff;
   
+}
+
+img {
+  max-width: 100%;
+  border:0;
+  vertical-align: bottom;
 }
 
 .header,
 .footer {
   padding: 20px;
-  background:#E4F1FE;
+  background:url("../images/dist/noise.png") $main-bg;
+  color:$main-text-color;
+  @include clearfix;
+  height:100px;
+ }
+ 
+
+.header { 
+  .left {
+    width:auto;
+    float: left;
+    height: 100%;
+    
+    
+    .logo {
+      @include vertical-align;
+      width: 30px;
+      float: left;
+      display: block;
+    }
+    
+    h1 {
+      float: left;
+      font-family: $heading-font;
+      @include vertical-align;
+      @include reset;
+      padding:0 20px 0 10px;
+      color:darken($main-bg,15%);
+      
+      font-size:2.2em;
+      
+      
+    }
+  }
+  .right {
+    width: auto;
+    float: left;
+    height: 100%;
+    border-left:1px solid rgba(0,0,0,.05); 
+    padding:0 0 0 20px;
+    
+    form {
+      @include vertical-align;
+    }
+  }
 }
 
 iframe {

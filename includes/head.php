@@ -14,7 +14,7 @@
 	<title>DrunkUX</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<meta name="description" content="test the drunk ux now">
-
+	<link href='http://fonts.googleapis.com/css?family=Lobster|Raleway' rel='stylesheet' type='text/css'>
 	<!-- facebook -->
 	<meta property="og:title" content="content">
 	<meta property="og:type" content="website">

@@ -19,6 +19,7 @@ $RECYCLE.BIN/
 
 .sass-cache
 node_modules
+_psd
 
 # =========================
 # Operating System Files
