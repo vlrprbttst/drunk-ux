@@ -3,6 +3,29 @@
 @import "partials/_variables.scss";
 @import "partials/_mixin.scss";
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  background:#eee;
+  @include reset;
+  background:#fff;
+  
+}
+
+.header,
+.footer {
+  padding: 20px;
+  background:#E4F1FE;
+}
+
+iframe {
+  width: 100%;
+  border:0;
+  vertical-align: bottom;
+  
 }

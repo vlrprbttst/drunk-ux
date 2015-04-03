@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 			extract : {
 				outfile : 'css/critical.css.php',
 				css : 'css/main.css',
-				url : 'http://localhost/drunkux',
+				url : 'http://localhost/drunk-ux',
 				width : 1200,
 				height : 500
 			},
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
 					src : ['css/*.css', 'images/*.*', 'js/build/production.min.js', '*.php', 'includes/*.php']
 				},
 				options : {
-					proxy : "localhost/drunkux",
+					proxy : "localhost/drunk-ux",
 					watchTask : true // < VERY important
 				}
 			}

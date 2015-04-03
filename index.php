@@ -11,6 +11,10 @@
 	
 	<iframe id="sg-viewport" src="<?php echo $src; ?>" sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
 	
+	<footer class="footer">
+		footer
+	</footer>
+	
 	<?php include 'includes/scripts.php'; ?>
 	</body>
 </html>
