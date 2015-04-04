@@ -11,7 +11,7 @@ body {
   font-family: "Raleway", sans-serif;
   text-shadow: 0 1px 0 #fff;
   overflow: hidden;
-  background: url("../images/dist/noise.png") #E4F1FE; }
+  background: #E4F1FE; }
 
 img {
   max-width: 100%;
@@ -20,15 +20,15 @@ img {
 
 .header{
   padding: 20px;
-  background: url("../images/dist/noise.png") #E4F1FE;
-  color: #333;
-  height: 100px; }
+  background: #E4F1FE;
+  color: #333; }
   .header:after{
     content: "";
     display: table;
     clear: both; }
 
 .header {
+  height: 120px;
   border-bottom: 5px solid #b3d7fc; }
   .header .left {
     width: auto;
@@ -60,7 +60,6 @@ img {
     width: auto;
     float: left;
     height: 100%;
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
     padding: 0 0 0 20px; }
     .header .right form {
       position: relative;
@@ -68,6 +67,9 @@ img {
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
+      .header .right form label {
+        display: block;
+        margin: 0 0 10px; }
 
 input {
   vertical-align: middle;
@@ -122,6 +124,16 @@ button {
   .drunk::-moz-focus-inner {
     padding: 0 !important;
     margin: -1px !important; }
+  .drunk:after {
+    width: 150px;
+    height: 50px;
+    background: url("../images/dist/sign.png") center center no-repeat;
+    background-size: 100% auto;
+    content: "";
+    position: absolute;
+    left: -160px;
+    top: 0;
+    opacity: .6; }
 
 .theframe {
   width: 100%;

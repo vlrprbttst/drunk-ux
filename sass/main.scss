@@ -20,7 +20,7 @@ body {
   font-family: $font;
   text-shadow: 0 1px 0 #fff;
   overflow: hidden;
-  background:url("../images/dist/noise.png") $main-bg;
+  background: $main-bg;
   
 }
 
@@ -33,15 +33,14 @@ img {
 .header,
 .footer {
   padding: 20px;
-  background:url("../images/dist/noise.png") $main-bg;
+  background:$main-bg;
   color:$main-text-color;
   @include clearfix;
-  height:100px;
+  
  }
  
-
 .header { 
-  
+  height:120px;
   border-bottom:5px solid darken($main-bg,10%);
   .left {
     width:auto;
@@ -73,11 +72,14 @@ img {
     width: auto;
     float: left;
     height: 100%;
-    border-left:1px solid rgba(0,0,0,.05); 
     padding:0 0 0 20px;
     
     form {
       @include vertical-align;
+      label {
+        display: block;
+        margin: 0 0 10px;
+      }
     }
   }
 }
@@ -131,9 +133,28 @@ a:hover {
   border-radius:10px;
   cursor:pointer;
   text-transform: uppercase;
+  
+  &:after {
+    width: 150px;
+    height: 50px;
+    background:url("../images/dist/sign.png") center center no-repeat;
+    background-size:100% auto;
+    content:"";
+    position: absolute;
+    left:-160px;
+    top: 0;
+    opacity:.6;
+    
+  }
+  
   &:active {
     @include vertical-align;
     top: 55%;
+    
+        &:after {
+    display: none;
+    
+  }
   }
   &.active {
    @include sassy-button("simple", 5px, 19px, red) ;
@@ -141,6 +162,10 @@ a:hover {
   &:active {
     @include vertical-align;
     top: 55%;
+  }
+    &:after {
+    display: none;
+    
   }
   }
 }
@@ -157,6 +182,7 @@ a:hover {
 .footer {
   border-top:5px solid darken($main-bg,10%);
   @include clearfix;
+  height: 60px;
   .cell {
     float: left;
     @include vertical-align;
@@ -165,6 +191,12 @@ a:hover {
       float: right;
       a {
         padding:0 5px 0 0;
+      }
+      
+      span {
+        display: inline-block;
+        font-size:12px;
+        color:#999;
       }
     }
   }
