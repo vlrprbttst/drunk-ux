@@ -66,7 +66,7 @@ include 'includes/head.php';
 			href="http://valeriopierbattista.com/projects/drunkux/"
 			data-url="http://valeriopierbattista.com/projects/drunkux/"
 			data-via="vlrprbttst"
-			data-text="DrunkUX: Test your website UX behind drunk eyes #dontdrinkandbrowse #drunkux #ux - "
+			data-text="DrunkUX: Test your website's UX behind drunk eyes #dontdrinkandbrowse #drunkux #ux - "
 			data-count="horizontal">
 			Tweet
 			</a>
