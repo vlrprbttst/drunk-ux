@@ -9,8 +9,14 @@ navHeight();
 
 $(window).resize(function() {
 	navHeight();
-}); 
-
-jQuery(window).load(function () {
-$("iframe").contents().find("body").addClass("myClass");
 });
+
+$(".drunk").click(function() {
+	$("iframe").toggleClass("drunkvision");	
+
+	if ($(this).text() == "stop")
+		$(this).text("drunk vision")
+	else
+		$(this).text("stop");
+
+}); 

@@ -2,6 +2,9 @@
 @import "compass";
 @import "partials/_variables.scss";
 @import "partials/_mixin.scss";
+@import "sassy-buttons";
+
+
 
 html {
   box-sizing: border-box;
@@ -75,9 +78,51 @@ img {
   }
 }
 
+input {
+  vertical-align: middle;
+  @include reset;
+  border:0;
+  padding:10px;
+  border-radius:3px;
+  font-family:'courier';
+  max-width:450px;
+  display: inline-block;
+}
+
+button {
+  box-shadow:none;
+  padding:10px 20px;
+  font-family:'courier';
+  border:0;
+  color:#333;
+  cursor:pointer;
+  background:lightgrey;
+  border-radius:3px;
+  
+  
+}
+
+.drunk {
+  @include sassy-button-gradient("simple", $main-bg);
+  float: right;
+  @include vertical-align;
+  padding:20px;
+  color:$main-text-color;
+  text-shadow: 0 1px 0 white;
+  border-radius:10px;
+  cursor:pointer;
+  text-transform: uppercase;
+}
+
 iframe {
   width: 100%;
   border:0;
   vertical-align: bottom;
   
+  
 }
+@import "partials/_animations.scss";
+.drunkvision {
+  animation: drunkvision1 10s infinite;
+}
+

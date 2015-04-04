@@ -78,7 +78,8 @@ module.exports = function(grunt) {
 			dist : {
 				options : {
 					style : 'compressed', //no need for config.rb
-					compass : 'true'
+					compass : 'true',
+					require : 'sassy-buttons'
 				},
 				files : {
 					'css/main.css' : 'sass/main.scss'
