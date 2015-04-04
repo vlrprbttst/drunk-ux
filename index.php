@@ -16,7 +16,7 @@
 		  <div class="drunk">drunk vision</div>
 	</header>
 	
-	<iframe id="sg-viewport" src="<?php echo $src; ?>" sandbox="allow-same-origin allow-scripts allow-forms"></iframe>
+	<iframe id="sg-viewport" src="<?php echo $src; ?>" sandbox="allow-same-origin allow-scripts allow-forms" class="theframe"></iframe>
 	
 	<footer class="footer">
 		footer

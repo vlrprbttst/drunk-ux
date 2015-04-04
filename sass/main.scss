@@ -19,6 +19,8 @@ body {
   background:#fff;
   font-family: $font;
   text-shadow: 0 1px 0 #fff;
+  overflow: hidden;
+  background:url("../images/dist/noise.png") $main-bg;
   
 }
 
@@ -39,6 +41,8 @@ img {
  
 
 .header { 
+  
+  border-bottom:5px solid darken($main-bg,10%);
   .left {
     width:auto;
     float: left;
@@ -118,11 +122,13 @@ iframe {
   width: 100%;
   border:0;
   vertical-align: bottom;
+  position:relative;
+
   
-  
+}
+
+.footer {
+  border-top:5px solid darken($main-bg,10%);
 }
 @import "partials/_animations.scss";
-.drunkvision {
-  animation: drunkvision1 10s infinite;
-}
 

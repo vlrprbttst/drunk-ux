@@ -1,50 +1,70 @@
-@keyframes drunkvision1 {
-  
+@for $i from 1 through 10 {
+  @keyframes drunkvision#{$i} { 
+    
   0%,100% {
-    transform:scale(1) translate(0,0) rotate(0);
-    -webkit-filter:blur(.5px);
+    transform:scale(random(1)) translate( (random(2)+px),(random(20)+px) ) rotate(0); 
+    
+    -webkit-filter:blur(1px);
    
   }
   
   10% {
     
+    transform:scale(1.001) translate( -(random(10)+px),(random(2)+px) ) rotate(.1deg);
+     -webkit-filter:blur(2px);
+    
   }
   
   20% {
+        transform:scale(.99) translate( (random(4)+px),-(random(5)+px) ) rotate(-.1deg);
+     -webkit-filter:blur(1px);
     
   }
   
   30% {
     
-  }
-  
-  40% {
+    transform:scale(1) translate( -(random(5)+px),(random(1)+px) ) rotate(0deg);
+     -webkit-filter:blur(random(2));
     
   }
   
+  40% {
+    transform:scale(1.02) translate(0,0px) rotate(.6deg);
+     -webkit-filter:blur(2px);
+  }
+  
   50% {
-     transform:scale(1.01) translate(-5px,-10px) rotate(5deg);
+     transform:scale(1.01) translate(-5px,-10px) rotate(.5deg);
      -webkit-filter:blur(1px);
+     -webkit-filter: grayscale(0);
     
   }
   
   60% {
-    
+    -webkit-filter:blur(5px);
+    -webkit-filter: grayscale(.7);
+     -webkit-filter:blur(.8px);
   }
   
   70% {
-    
+    transform:scale(1) translate( (random(5)+px),(random(2)+px) ) rotate(-.5deg);
+    -webkit-filter: grayscale(0);
+     -webkit-filter:blur(1px);
   }
   
   80% {
-    
+    transform:scale(1) translate(-1px,1px) rotate(-.2deg);
+    -webkit-filter:blur(5px);
   }
   
   90% {
-    
+    -webkit-filter:blur(3px);
+  }
   }
   
-
+  .drunkvision#{$i} { 
+   animation: drunkvision#{$i} (random(10)+s) infinite;
+  }
   
   
 }
