@@ -123,7 +123,7 @@ button {
     padding: 0 !important;
     margin: -1px !important; }
 
-iframe {
+.theframe {
   width: 100%;
   border: 0;
   vertical-align: bottom;

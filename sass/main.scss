@@ -108,12 +108,15 @@ a,
 a:active,
 a:visited {
   color:$main-text-color;
-  
 }
 
 a:hover {
   text-decoration: none;
   
+}
+
+.twitter-share-button {
+  vertical-align: bottom;
 }
 
 .drunk {
@@ -142,7 +145,7 @@ a:hover {
   }
 }
 
-iframe {
+.theframe {
   width: 100%;
   border:0;
   vertical-align: bottom;
@@ -157,6 +160,13 @@ iframe {
   .cell {
     float: left;
     @include vertical-align;
+    
+    &:last-child {
+      float: right;
+      a {
+        padding:0 5px 0 0;
+      }
+    }
   }
 }
 @import "partials/_animations.scss";

@@ -6,7 +6,7 @@ return(!i||i!==r&&!b.contains(r,i))&&(e.type=o.origType,n=o.handler.apply(this,a
 function navHeight() {
 	var heights = window.innerHeight;
 	var outerHeights = $(".header").outerHeight(true) + $(".footer").outerHeight(true);
-	$('iframe').css('height', (heights - outerHeights) + "px");
+	$('.theframe').css('height', (heights - outerHeights) + "px");
 
 };
 
@@ -26,12 +26,13 @@ $(".drunk").click(function() {
 
     if($(this).text() === "oh my god stop!")
     {
-        $("iframe").removeClass(classes.join(' '));
+        $(".theframe").removeClass(classes.join(' '));
         $(this).html("<i class='fa fa-beer'></i> Drunk Vision");
     }
     else{
-    $("iframe").addClass(classes[randomnumber]);
+    $(".theframe").addClass(classes[randomnumber]);
     $(this).text("oh my god stop!");
 }
 
 }); 
+
