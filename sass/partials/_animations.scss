@@ -3,21 +3,22 @@
     
   0%,100% {
     transform:scale(random(1)) translate( (random(2)+px),(random(20)+px) ) rotate(0); 
-    
-    -webkit-filter:blur(1px);
+    -webkit-filter:blur(random(2)+px);filter:blur(random(2)+px);
    
   }
   
   10% {
     
     transform:scale(1.001) translate( -(random(10)+px),(random(2)+px) ) rotate(.1deg);
-     -webkit-filter:blur(2px);
+     -webkit-filter:blur(random(4)+px);
+     filter:blur(random(4)+px);
     
   }
   
   20% {
         transform:scale(.99) translate( (random(4)+px),-(random(5)+px) ) rotate(-.1deg);
      -webkit-filter:blur(1px);
+      filter:blur(1px);
     
   }
   
@@ -25,45 +26,50 @@
     
     transform:scale(1) translate( -(random(5)+px),(random(1)+px) ) rotate(0deg);
      -webkit-filter:blur(random(2));
+     filter:blur(random(2));
     
   }
   
   40% {
-    transform:scale(1.02) translate(0,0px) rotate(.6deg);
-     -webkit-filter:blur(2px);
+    transform:scale(1.02) translate(0,0px) rotate(.2deg);
+     -webkit-filter:blur(random(3)+px);
+     filter:blur(random(3)+px);
   }
   
   50% {
-     transform:scale(1.01) translate(-5px,-10px) rotate(.5deg);
-     -webkit-filter:blur(1px);
-     -webkit-filter: grayscale(0);
+     transform:scale(1.01) translate( (random(5)+px),-(random(8)+px) ) rotate(.1deg);
+     -webkit-filter:blur(random(3)+px);
+     filter:blur(random(3)+px);
+     
     
   }
   
   60% {
-    -webkit-filter:blur(5px);
-    -webkit-filter: grayscale(.7);
+
      -webkit-filter:blur(.8px);
+     filter:blur(.8px);
   }
   
   70% {
-    transform:scale(1) translate( (random(5)+px),(random(2)+px) ) rotate(-.5deg);
-    -webkit-filter: grayscale(0);
+    transform:scale(1) translate( (random(5)+px),(random(2)+px) ) rotate(-.2deg);
      -webkit-filter:blur(1px);
+     filter:blur(1px);
   }
   
   80% {
-    transform:scale(1) translate(-1px,1px) rotate(-.2deg);
-    -webkit-filter:blur(5px);
+    transform:scale(1) translate( (random(4)+px),-(random(4)+px) ) rotate(-.1deg);
+-webkit-filter:blur(random(5));
+     filter:blur(random(5));
   }
   
   90% {
-    -webkit-filter:blur(3px);
+    -webkit-filter:blur(random(2));
+     filter:blur(random(2));
   }
   }
   
   .drunkvision#{$i} { 
-   animation: drunkvision#{$i} (random(10)+s) infinite;
+   animation: drunkvision#{$i} (random(10)+s) infinite cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   
   

@@ -51,7 +51,7 @@ img {
     
     .logo {
       @include vertical-align;
-      width: 30px;
+      width: 40px;
       float: left;
       display: block;
     }
@@ -88,8 +88,7 @@ input {
   border:0;
   padding:10px;
   border-radius:3px;
-  font-family:'courier';
-  max-width:450px;
+  font-family:"Courier New", Courier, monospace;
   display: inline-block;
 }
 
@@ -107,7 +106,7 @@ button {
 }
 
 .drunk {
-  @include sassy-button-gradient("simple", $main-bg);
+  @include sassy-button-gradient("simple", #C8F7C5);
   float: right;
   @include vertical-align;
   padding:20px;
@@ -116,6 +115,9 @@ button {
   border-radius:10px;
   cursor:pointer;
   text-transform: uppercase;
+  &.active {
+  @include sassy-button-gradient("simple", red);
+  }
 }
 
 iframe {
