@@ -77,7 +77,8 @@ input {
   padding: 10px;
   border-radius: 3px;
   font-family: "Courier New", Courier, monospace;
-  display: inline-block; }
+  display: inline-block;
+  width: 300px; }
 
 button {
   box-shadow: none;
@@ -90,14 +91,22 @@ button {
   border-radius: 3px; }
 
 .drunk {
+  font-size: 19px;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFC8F7C5', endColorstr='#FF73EB6B');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M4ZjdjNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzlkZjE5OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: linear-gradient(#c8f7c5, #9df198);
-  box-shadow: white 0 1px 0 inset;
-  border: 1px solid #88ee82;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFB3F4AF', endColorstr='#FF5EE855');
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2IzZjRhZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg4ZWU4MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: linear-gradient(#b3f4af, #88ee82);
+  box-shadow: #f3fdf2 0 1px 0 inset;
+  border: 1px solid #73eb6b;
   color: white;
-  text-shadow: #59e750 0 -1px 0;
+  text-shadow: #44e43a 0 -1px 0;
+  position: relative;
+  box-shadow: #2be01f 0 0.4em 0px, #aaf3a6 0 1px 0 inset;
+  border-bottom: solid 1px #5ee855;
   float: right;
   position: relative;
   top: 50%;
@@ -110,6 +119,9 @@ button {
   border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase; }
+  .drunk::-moz-focus-inner {
+    padding: 0 !important;
+    margin: -1px !important; }
 
 iframe {
   width: 100%;

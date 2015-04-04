@@ -90,6 +90,7 @@ input {
   border-radius:3px;
   font-family:"Courier New", Courier, monospace;
   display: inline-block;
+  width:300px;
 }
 
 button {
@@ -101,12 +102,24 @@ button {
   cursor:pointer;
   background:lightgrey;
   border-radius:3px;
+}
+
+a,
+a:active,
+a:visited {
+  color:$main-text-color;
   
+}
+
+a:hover {
+  text-decoration: none;
   
 }
 
 .drunk {
-  @include sassy-button-gradient("simple", #C8F7C5);
+  
+  @include sassy-button("simple", 5px, 19px, darken(#C8F7C5,5%)) ;
+  @include sassy-button-style("push", darken(#C8F7C5,25%));
   float: right;
   @include vertical-align;
   padding:20px;
@@ -115,8 +128,17 @@ button {
   border-radius:10px;
   cursor:pointer;
   text-transform: uppercase;
+  &:active {
+    @include vertical-align;
+    top: 55%;
+  }
   &.active {
-  @include sassy-button-gradient("simple", red);
+   @include sassy-button("simple", 5px, 19px, red) ;
+@include sassy-button-style("push", darken(red,5%));
+  &:active {
+    @include vertical-align;
+    top: 55%;
+  }
   }
 }
 
@@ -131,6 +153,11 @@ iframe {
 
 .footer {
   border-top:5px solid darken($main-bg,10%);
+  @include clearfix;
+  .cell {
+    float: left;
+    @include vertical-align;
+  }
 }
 @import "partials/_animations.scss";
 

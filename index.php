@@ -8,7 +8,7 @@
 		</div>
 		<div class="right">
 		<form method="get" action="" id="url-form">
-			<label for="url" id="url-toggle" class="url-toggle">Insert your URL: </label>
+			
 		     <input id="url" type="text" name="url" placeholder="Enter any URL" value="<?php echo $src; ?>" />
 		     <button id="url-submit">Go</button>
 		  </form>
@@ -19,7 +19,9 @@
 	<iframe id="sg-viewport" src="<?php echo $src; ?>" sandbox="allow-same-origin allow-scripts allow-forms" class="theframe"></iframe>
 	
 	<footer class="footer">
-		footer
+		<div class="cell">
+			An <b>incredibly useful tool</b> brought to you by <a href="https://twitter.com/vlrprbttst" target="_blank">Valerio Pierbattista </a>
+		</div>
 	</footer>
 	
 	<?php include 'includes/scripts.php'; ?>

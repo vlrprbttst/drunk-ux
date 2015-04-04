@@ -3,7 +3,8 @@
     
   0%,100% {
     transform:scale(random(1)) translate( (random(2)+px),(random(20)+px) ) rotate(0); 
-    -webkit-filter:blur(random(2)+px);filter:blur(random(2)+px);
+    -webkit-filter:blur(random(2)+px);
+    filter:blur(random(2)+px);
    
   }
   
@@ -32,22 +33,19 @@
   
   40% {
     transform:scale(1.02) translate(0,0px) rotate(.2deg);
-     -webkit-filter:blur(random(3)+px);
-     filter:blur(random(3)+px);
+     -webkit-filter:blur(random(3)+px) contrast(random(2));
+     filter:blur(random(3)+px) contrast(random(2));
   }
   
   50% {
      transform:scale(1.01) translate( (random(5)+px),-(random(8)+px) ) rotate(.1deg);
      -webkit-filter:blur(random(3)+px);
      filter:blur(random(3)+px);
-     
-    
   }
   
   60% {
-
-     -webkit-filter:blur(.8px);
-     filter:blur(.8px);
+     -webkit-filter:blur(.8px) saturate(random(1));
+     filter:blur(.8px) saturate(random(1));
   }
   
   70% {
@@ -58,8 +56,8 @@
   
   80% {
     transform:scale(1) translate( (random(4)+px),-(random(4)+px) ) rotate(-.1deg);
--webkit-filter:blur(random(5));
-     filter:blur(random(5));
+    -webkit-filter:blur(random(5)) contrast(random(1));
+     filter:blur(random(5)) contrast(random(1));
   }
   
   90% {
