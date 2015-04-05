@@ -1,5 +1,6 @@
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -11,7 +12,9 @@ body {
   font-family: "Raleway", sans-serif;
   text-shadow: 0 1px 0 #fff;
   overflow: hidden;
-  background: #E4F1FE; }
+  background: #E4F1FE;
+  font-size: 1em;
+  line-height: 24px; }
 
 img {
   max-width: 100%;
@@ -28,48 +31,70 @@ img {
     clear: both; }
 
 .header {
-  height: 120px;
   border-bottom: 5px solid #b3d7fc; }
+  @media all and (max-width: 980px) {
+    .header {
+      height: auto;
+      padding: 5px; } }
   .header .left {
     width: auto;
     float: left;
     height: 100%; }
+    @media all and (max-width: 980px) {
+      .header .left {
+        height: auto;
+        position: static; } }
     .header .left .logo {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
       width: 40px;
       float: left;
       display: block; }
+      @media all and (max-width: 980px) {
+        .header .left .logo {
+          position: static;
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none;
+          width: 20px; } }
     .header .left h1 {
       float: left;
       font-family: "Lobster", cursive;
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
       margin: 0;
       padding: 0;
-      padding: 0 20px 0 10px;
+      padding: 20px 20px 0 10px;
       color: #9acbfb;
       font-size: 2.2em; }
+      @media all and (max-width: 980px) {
+        .header .left h1 {
+          display: none; } }
   .header .right {
     width: auto;
     float: left;
     height: 100%;
     padding: 0 0 0 20px; }
-    .header .right form {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%); }
-      .header .right form label {
-        display: block;
-        margin: 0 0 10px; }
+    @media all and (max-width: 980px) {
+      .header .right {
+        position: static;
+        height: auto;
+        width: auto;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        padding: 0 0 0 10px;
+        float: left; } }
+    @media all and (max-width: 980px) {
+      .header .right form {
+        position: static;
+        height: auto;
+        width: auto;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none; } }
+    .header .right form label {
+      display: block;
+      margin: 0 0 10px; }
+      @media all and (max-width: 980px) {
+        .header .right form label {
+          display: none; } }
 
 input {
   vertical-align: middle;
@@ -81,6 +106,9 @@ input {
   font-family: "Courier New", Courier, monospace;
   display: inline-block;
   width: 300px; }
+  @media all and (max-width: 980px) {
+    input {
+      width: 220px; } }
 
 button {
   box-shadow: none;
@@ -106,15 +134,8 @@ button {
   border: 1px solid #73eb6b;
   color: white;
   text-shadow: #44e43a 0 -1px 0;
-  position: relative;
-  box-shadow: #2be01f 0 0.4em 0px, #aaf3a6 0 1px 0 inset;
-  border-bottom: solid 1px #5ee855;
   float: right;
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   padding: 20px;
   color: #333;
   text-shadow: 0 1px 0 white;
@@ -124,6 +145,24 @@ button {
   .drunk::-moz-focus-inner {
     padding: 0 !important;
     margin: -1px !important; }
+  @media all and (max-width: 600px) {
+    .drunk {
+      position: static;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
+      float: none;
+      padding: 10px;
+      margin: 0 0 0 20px; } }
+  @media all and (max-width: 500px) {
+    .drunk {
+      position: static;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
+      float: none;
+      padding: 10px;
+      margin: 10px 0 0 30px; } }
   .drunk:after {
     width: 150px;
     height: 50px;
@@ -134,6 +173,9 @@ button {
     left: -160px;
     top: 0;
     opacity: .6; }
+    @media all and (max-width: 401px) {
+      .drunk:after {
+        display: none; } }
 
 .theframe {
   width: 100%;

@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  font-size:100%;
 }
 
 *, *:before, *:after {
@@ -21,7 +22,8 @@ body {
   text-shadow: 0 1px 0 #fff;
   overflow: hidden;
   background: $main-bg;
-  
+  font-size:1em;
+  line-height:24px;
 }
 
 img {
@@ -36,35 +38,50 @@ img {
   background:$main-bg;
   color:$main-text-color;
   @include clearfix;
-  
  }
  
 .header { 
-  height:120px;
   border-bottom:5px solid darken($main-bg,10%);
+  
+  @include respond-to(980) {
+    height:auto;
+    padding:5px;
+  }
+  
   .left {
     width:auto;
     float: left;
     height: 100%;
     
+      @include respond-to(980) {
+    height:auto;
+    position:static;
+  }
+    
     
     .logo {
-      @include vertical-align;
+     
       width: 40px;
       float: left;
       display: block;
+  @include respond-to(980) {
+    position:static;
+    transform: none;
+    width:20px;
+  }
     }
     
     h1 {
       float: left;
       font-family: $heading-font;
-      @include vertical-align;
+     
       @include reset;
-      padding:0 20px 0 10px;
+      padding:20px 20px 0 10px; 
       color:darken($main-bg,15%);
-      
       font-size:2.2em;
-      
+        @include respond-to(980) {
+    display: none;
+  }
       
     }
   }
@@ -74,11 +91,29 @@ img {
     height: 100%;
     padding:0 0 0 20px;
     
+          @include respond-to(980) {
+            position:static;
+    height:auto;
+    width: auto;
+     transform: none;
+     padding: 0 0 0 10px;
+     float: left;
+  }
+    
     form {
-      @include vertical-align;
+    
+    @include respond-to(980) {
+    position:static;
+    height:auto;
+    width: auto;
+     transform: none;
+     
+     
+  }
       label {
         display: block;
         margin: 0 0 10px;
+         @include respond-to(980) {display: none;}
       }
     }
   }
@@ -93,6 +128,10 @@ input {
   font-family:"Courier New", Courier, monospace;
   display: inline-block;
   width:300px;
+  @include respond-to(980) {
+   width: 220px;
+    
+  }
 }
 
 button {
@@ -118,21 +157,40 @@ a:hover {
 }
 
 .twitter-share-button {
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .drunk {
   
   @include sassy-button("simple", 5px, 19px, darken(#C8F7C5,5%)) ;
-  @include sassy-button-style("push", darken(#C8F7C5,25%));
+  
   float: right;
-  @include vertical-align;
+ position:relative;
   padding:20px;
   color:$main-text-color;
   text-shadow: 0 1px 0 white;
   border-radius:10px;
   cursor:pointer;
   text-transform: uppercase;
+
+  @include respond-to(600) {
+   position: static;
+   transform:none;
+   float: none; 
+   padding:10px;
+   margin:0 0 0 20px;  
+   
+  }
+
+  
+  @include respond-to(500) {
+   position: static;
+   transform:none;
+   float: none; 
+   padding:10px;
+   margin:10px 0 0 30px; 
+   
+  }
   
   &:after {
     width: 150px;
@@ -145,24 +203,14 @@ a:hover {
     top: 0;
     opacity:.6;
     
+    @include respond-to(401) {display: none;}
+    
   }
   
-  &:active {
-    @include vertical-align;
-    top: 55%;
-    
-        &:after {
-    display: none;
-    
-  }
-  }
+
   &.active {
    @include sassy-button("simple", 5px, 19px, red) ;
-@include sassy-button-style("push", darken(red,5%));
-  &:active {
-    @include vertical-align;
-    top: 55%;
-  }
+
     &:after {
     display: none;
     
@@ -182,20 +230,36 @@ a:hover {
 .footer {
   border-top:5px solid darken($main-bg,10%);
   @include clearfix;
-  height: 60px;
+  padding:10px 20px;
+  
+   @include respond-to(980) {
+     height:auto;
+     padding:5px;}
+  
   .cell {
     float: left;
-    @include vertical-align;
+   
+    
+    @include respond-to(980) {
+      float: none;
+      position: static;
+      text-align: center;
+      transform:none;}
     
     &:last-child {
       float: right;
+          @include respond-to(980) {
+      float: none;
+      position: static;
+      text-align: center;
+      transform:none;}
       a {
         padding:0 5px 0 0;
       }
       
       span {
         display: inline-block;
-        font-size:12px;
+        font-size:.7em;
         color:#999;
       }
     }

@@ -5,13 +5,10 @@
 <!--[if lt IE 9]>
 <html lang="en" class="ie ie-legacy">
 <![endif]-->
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
 	<head>
-		<style type="text/css">
-<?php
-			include 'css/critical.css.php';
- ?>
-		</style>
 
 		<meta charset="utf-8">
 		<title>DrunkUX</title>
@@ -19,12 +16,13 @@
 		<meta name="description" content="Test your UX behind drunk eyes">
 		<link href='http://fonts.googleapis.com/css?family=Lobster|Raleway' rel='stylesheet' type='text/css'>
 		<!-- facebook -->
-		<meta property="og:title" content="DrunkUX">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="http://valeriopierbattista.com/projects/drunkux/">
-		<meta property="og:image" content="http://valeriopierbattista.com/projects/drunkux/images/dist/facebook-image.png">
-		<meta property="og:description" content="Test your UX behind drunk eyes">
-		<meta property="og:site_name" content="http://valeriopierbattista.com/projects/drunkux/">
+		<meta property="og:title" content="DrunkUX"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://valeriopierbattista.com/projects/drunkux/"/>
+		<meta property="og:image" content="http://valeriopierbattista.com/projects/drunkux/images/dist/facebook-image.png"/>
+		<meta property="og:description" content="Test your UX behind drunk eyes"/>
+		<meta property="og:site_name" content="DrunkUX"/>
+
 		<meta http-equiv="content-language" content="EN">
 		<!-- viewport -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -2,18 +2,7 @@
 include 'includes/head.php';
 ?>
 <body>
-	<div id="fb-root"></div>
-	<script>
-		( function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id))
-					return;
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-	</script>
+
 	<script>
 		window.twttr = ( function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
@@ -38,7 +27,7 @@ include 'includes/head.php';
 		</div>
 		<div class="right">
 			<form method="get" action="" id="url-form">
-			<label for="url"><i class="fa fa-arrow-circle-o-down"></i> Insert URL here:</label>
+				<label for="url"><i class="fa fa-arrow-circle-o-down"></i> Insert URL here:</label>
 
 				<input id="url" type="text" name="url" placeholder="Enter any URL" value="<?php echo $src; ?>" />
 				<button id="url-submit">
@@ -55,22 +44,19 @@ include 'includes/head.php';
 
 	<footer class="footer">
 		<div class="cell">
-			An <b>incredibly useful tool</b> brought to you by <a href="https://twitter.com/vlrprbttst" target="_blank">Valerio Pierbattista</a> - 
-			<i class="fa fa-github fa-lg"></i>&nbsp;<a href="https://github.com/vlrprbttst/drunk-ux" target="_blank">Source & Info</a>
+			An <b>incredibly useful tool</b> brought to you by <a href="https://twitter.com/vlrprbttst" target="_blank">Valerio Pierbattista</a> - <i class="fa fa-github fa-lg"></i>&nbsp;<a href="https://github.com/vlrprbttst/drunk-ux" target="_blank">Source & Info</a>
 		</div>
 		<div class="cell">
+
 			
-			<span><i class="fa fa-ban"></i> Don't Drink & Browse ;)</span>
-			<div class="fb-share-button" data-href="http://www.valeriopierbattista.com/projects/drunkux" data-layout="button_count"></div>
 			<a class="twitter-share-button"
 			href="http://valeriopierbattista.com/projects/drunkux/"
 			data-url="http://valeriopierbattista.com/projects/drunkux/"
 			data-via="vlrprbttst"
 			data-text="DrunkUX: Test your website's UX behind drunk eyes #dontdrinkandbrowse #drunkux #ux - "
-			data-count="horizontal">
-			Tweet
-			</a>
-			
+			data-count="horizontal"> Tweet </a>
+
+			<span><i class="fa fa-ban"></i> Don't Drink & Browse ;)</span>
 		</div>
 	</footer>
 
