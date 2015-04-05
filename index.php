@@ -19,7 +19,7 @@ include 'includes/head.php';
 				return t;
 			}(document, "script", "twitter-wjs"));
 	</script>
-	<?php $src = (empty($_GET['url'])) ? 'http://www.valeriopierbattista.com' : addslashes(filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL)); ?>
+	<?php $src = (empty($_GET['url'])) ? 'http://' : addslashes(filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL)); ?>
 	<header class="header">
 		<div class="left">
 			<img src="images/dist/logo.png" class="logo">
@@ -40,7 +40,9 @@ include 'includes/head.php';
 		</div>
 	</header>
 
-	<iframe id="sg-viewport" src="<?php echo $src; ?>" sandbox="allow-same-origin allow-scripts allow-forms" class="theframe"></iframe>
+	<iframe id="sg-viewport" src="<?php echo $src; ?>" sandbox="allow-same-origin allow-scripts allow-forms" class="theframe">
+		
+	</iframe>
 
 	<footer class="footer">
 		<div class="cell">

@@ -17,7 +17,6 @@ html {
 
 body {
   @include reset;
-  background:#fff;
   font-family: $font;
   text-shadow: 0 1px 0 #fff;
   overflow: hidden;

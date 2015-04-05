@@ -8,7 +8,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
   font-family: "Raleway", sans-serif;
   text-shadow: 0 1px 0 #fff;
   overflow: hidden;
@@ -21,11 +20,13 @@ img {
   border: 0;
   vertical-align: bottom; }
 
-.header{
+.header,
+.footer {
   padding: 20px;
   background: #E4F1FE;
   color: #333; }
-  .header:after{
+  .header:after,
+  .footer:after {
     content: "";
     display: table;
     clear: both; }
@@ -120,6 +121,12 @@ button {
   background: lightgrey;
   border-radius: 3px; }
 
+a{
+  color: #333; }
+
+.twitter-share-button {
+  vertical-align: middle; }
+
 .drunk {
   font-size: 19px;
   padding: 0.5em 1.5em;
@@ -182,3 +189,41 @@ button {
   border: 0;
   vertical-align: bottom;
   position: relative; }
+
+.footer {
+  border-top: 5px solid #b3d7fc;
+  padding: 10px 20px; }
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media all and (max-width: 980px) {
+    .footer {
+      height: auto;
+      padding: 5px; } }
+  .footer .cell {
+    float: left; }
+    @media all and (max-width: 980px) {
+      .footer .cell {
+        float: none;
+        position: static;
+        text-align: center;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none; } }
+    .footer .cell:last-child {
+      float: right; }
+      @media all and (max-width: 980px) {
+        .footer .cell:last-child {
+          float: none;
+          position: static;
+          text-align: center;
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none; } }
+      .footer .cell:last-child a {
+        padding: 0 5px 0 0; }
+      .footer .cell:last-child span {
+        display: inline-block;
+        font-size: .7em;
+        color: #999; }
