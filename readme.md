@@ -1,7 +1,7 @@
 #What is this?
 
 This vital tool will help you evaluate the UX of your website while under the influence.<br>
-Check it out live @ [drunkux.com](http://drunkux.com)
+Check it out live @ [drunkuserexperience.com](http://drunkuserexperience.com)
 
 #Usage
 
