@@ -67,7 +67,7 @@ img {
       float: left;
       display: block;
       
-      @include respond-to(980) {width:20px;padding:0;vertical-align:bottom;display:inline}
+      @include respond-to(980) {width:20px;padding:3px 0 0 0;}
     }
     
     h1 {
@@ -125,7 +125,7 @@ img {
       button {
         vertical-align: middle;
       box-shadow:none;
-      padding:10px 20px;
+      padding:7px 20px;
       font-family:'courier';
       border:0;
       color:#333;
