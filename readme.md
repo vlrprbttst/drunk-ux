@@ -7,7 +7,7 @@ Check it out live @ [drunkuserexperience.com](http://drunkuserexperience.com)
 
 * Insert a url and click GO 
 * Hit the __Drunk Vision__ button
-*  Evaluate your UX
+* Browse website and evaluate your UX
 
 #Compatibility
 
