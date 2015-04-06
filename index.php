@@ -14,12 +14,12 @@
 		<meta name="description" content="Test your UX behind drunk eyes">
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<!-- facebook -->
-		<meta property="og:title" content="DrunkUX"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="http://valeriopierbattista.com/projects/drunkux/"/>
-		<meta property="og:image" content="http://valeriopierbattista.com/projects/drunkux/images/dist/facebook-image.png"/>
-		<meta property="og:description" content="Test your UX behind drunk eyes"/>
-		<meta property="og:site_name" content="DrunkUX"/>
+		<meta property="og:title" content="DrunkUX">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://valeriopierbattista.com/projects/drunkux/">
+		<meta property="og:image" content="http://valeriopierbattista.com/projects/drunkux/images/dist/facebook-image.png">
+		<meta property="og:description" content="Test your UX behind drunk eyes">
+		<meta property="og:site_name" content="DrunkUX">
 
 		<meta http-equiv="content-language" content="EN">
 		<!-- viewport -->
@@ -77,11 +77,11 @@
 			<div class="cell">
 
 				<a class="twitter-share-button"
-				href="http://valeriopierbattista.com/projects/drunkux/"
-				data-url="http://valeriopierbattista.com/projects/drunkux/"
+				href="http://www.drunkuserexperience.com"
+				data-url="http://www.drunkuserexperience.com"
 				data-via="vlrprbttst"
-				data-text="DrunkUX: Test your website's UX behind drunk eyes #dontdrinkandbrowse #drunkux #ux - "
-				data-count="horizontal"> Tweet </a>
+				data-text="Test your website's UX behind drunk eyes #dontdrinkandbrowse #drunkuserexperience #ux #usability- "
+				data-count="none"> Tweet </a>
 
 				<span><i class="fa fa-ban"></i> Don't Drink & Browse ;)</span>
 			</div>
