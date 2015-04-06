@@ -1,9 +1,7 @@
 #What is this?
 
-This vital tool will help you evaluate the UX of your website while under the influence.
+This vital tool will help you evaluate the UX of your website while under the influence.<br>
 Check it out live @ [drunkux.com](http://drunkux.com)
-
-%20%22drunkux.com)
 
 #Usage
 
