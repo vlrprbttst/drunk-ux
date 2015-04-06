@@ -5,7 +5,6 @@
 @import "sassy-buttons";
 
 
-
 html {
   box-sizing: border-box;
   font-size:100%;
@@ -13,135 +12,6 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-body {
-  @include reset;
-  font-family: $font;
-  text-shadow: 0 1px 0 #fff;
-  overflow: hidden;
-  background: $main-bg;
-  font-size:1em;
-  line-height:24px;
-}
-
-img {
-  max-width: 100%;
-  border:0;
-  vertical-align: bottom;
-}
-
-.header,
-.footer {
-  padding: 20px;
-  background:$main-bg;
-  color:$main-text-color;
-  @include clearfix;
- }
- 
-.header { 
-  border-bottom:5px solid darken($main-bg,10%);
-  
-  @include respond-to(980) {
-    height:auto;
-    padding:5px;
-  }
-  
-  .left {
-    width:auto;
-    float: left;
-    height: 100%;
-    
-      @include respond-to(980) {
-    height:auto;
-    position:static;
-  }
-    
-    
-    .logo {
-     
-      width: 40px;
-      float: left;
-      display: block;
-  @include respond-to(980) {
-    position:static;
-    transform: none;
-    width:20px;
-  }
-    }
-    
-    h1 {
-      float: left;
-      font-family: $heading-font;
-     
-      @include reset;
-      padding:20px 20px 0 10px; 
-      color:darken($main-bg,15%);
-      font-size:2.2em;
-        @include respond-to(980) {
-    display: none;
-  }
-      
-    }
-  }
-  .right {
-    width: auto;
-    float: left;
-    height: 100%;
-    padding:0 0 0 20px;
-    
-          @include respond-to(980) {
-            position:static;
-    height:auto;
-    width: auto;
-     transform: none;
-     padding: 0 0 0 10px;
-     float: left;
-  }
-    
-    form {
-    
-    @include respond-to(980) {
-    position:static;
-    height:auto;
-    width: auto;
-     transform: none;
-     
-     
-  }
-      label {
-        display: block;
-        margin: 0 0 10px;
-         @include respond-to(980) {display: none;}
-      }
-    }
-  }
-}
-
-input {
-  vertical-align: middle;
-  @include reset;
-  border:0;
-  padding:10px;
-  border-radius:3px;
-  font-family:"Courier New", Courier, monospace;
-  display: inline-block;
-  width:300px;
-  @include respond-to(980) {
-   width: 220px;
-    
-  }
-}
-
-button {
-  box-shadow:none;
-  padding:10px 20px;
-  font-family:'courier';
-  border:0;
-  color:#333;
-  cursor:pointer;
-  background:lightgrey;
-  border-radius:3px;
 }
 
 a,
@@ -155,16 +25,133 @@ a:hover {
   
 }
 
-.twitter-share-button {
-  vertical-align: middle;
+body {
+  @include reset;
+  font-family: $font;
+  text-shadow: 0 1px 0 #fff;
+  overflow: hidden;
+  background: $main-bg;
+  font-size:1em;
+  line-height:1.6em;
 }
 
+img {
+  max-width: 100%;
+  border:0;
+  vertical-align: bottom;
+}
+
+.header,
+.footer { 
+  background:$main-bg;
+  color:$main-text-color;
+  @include clearfix;
+ }
+ 
+.header { 
+  border-bottom:5px solid darken($main-bg,15%);
+  padding: 20px;
+  
+  @include respond-to(980) {padding:5px;}
+  
+  .left {
+    
+    float: left;    
+    
+    @include respond-to(980) {height:auto;}
+    
+    .logo {
+     
+      width: 40px;
+      float: left;
+      display: block;
+      
+      @include respond-to(980) {width:20px;}
+    }
+    
+    h1 {
+      float: left;
+      font-family: $heading-font;
+      margin: 0;
+      padding:20px 20px 0 10px; 
+      color:darken($main-bg,15%);
+      font-size:2.2em;
+      @include respond-to(990) {padding:5px 10px 0 10px}
+      @include respond-to(700) {display: none;}
+      
+    }
+  } //header left (logo)
+  
+  
+  .center {
+    width: auto;
+    float: left;
+    
+    padding:0 0 0 20px;
+    
+    @include respond-to(980) {padding: 0 0 0 9px;}
+    
+    form {
+      label {
+        display: block;
+        @include respond-to(980) {display: none;}
+      }
+      
+      input {
+        vertical-align: middle;
+        @include reset;
+        border:0;
+        padding:10px;
+        border-radius:3px;
+        font-family:"Courier New", Courier, monospace;
+        display: inline-block;
+        width:300px;
+        @include respond-to(980) {
+         width: 220px;
+          
+        }
+      }//input
+      
+      button {
+      box-shadow:none;
+      padding:10px 20px;
+      font-family:'courier';
+      border:0;
+      color:#333;
+      cursor:pointer;
+      background:lightgrey;
+      border-radius:3px;
+    }//go button
+  }//form
+}//center
+  
+  
+  .right {
+    
+    @include clearfix;
+    float: right;
+    padding: 0;
+    
+     @include respond-to(990) {
+      text-align: center;
+      float:right;
+      width: auto;
+      clear: none;
+      padding: 0;
+      }
+    @include respond-to(500) {
+      padding:5px 0 0 0;
+      float:none;
+      width: 100%;
+      clear: left;
+    }
+  }//right
+}//header
+
+
 .drunk {
-  
   @include sassy-button("simple", 5px, 19px, darken(#C8F7C5,5%)) ;
-  
-  float: right;
- position:relative;
+  position:relative;
   padding:20px;
   color:$main-text-color;
   text-shadow: 0 1px 0 white;
@@ -172,22 +159,19 @@ a:hover {
   cursor:pointer;
   text-transform: uppercase;
 
-  @include respond-to(600) {
-   position: static;
-   transform:none;
-   float: none; 
-   padding:10px;
+  @include respond-to(990) {
+   display: inline-block;
+   float: right; 
+   padding:5px 10px;
    margin:0 0 0 20px;  
    
   }
 
-  
   @include respond-to(500) {
-   position: static;
-   transform:none;
+   display: block;
    float: none; 
    padding:10px;
-   margin:10px 0 0 30px; 
+   margin:0; 
    
   }
   
@@ -202,14 +186,17 @@ a:hover {
     top: 0;
     opacity:.6;
     
-    @include respond-to(401) {display: none;}
+    @include respond-to(990) {display: none;}
     
   }
   
 
   &.active {
    @include sassy-button("simple", 5px, 19px, red) ;
-
+   padding: 20px;
+   @include respond-to(990) {padding:5px 10px;}
+   @include respond-to(500) {display: block;}
+    
     &:after {
     display: none;
     
@@ -223,35 +210,36 @@ a:hover {
   vertical-align: bottom;
   position:relative;
 
-  
 }
 
 .footer {
-  border-top:5px solid darken($main-bg,10%);
+  border-top:5px solid darken($main-bg,15%);
   @include clearfix;
   padding:10px 20px;
   
    @include respond-to(980) {
-     height:auto;
-     padding:5px;}
+     padding:5px;
+     }
   
   .cell {
     float: left;
-   
-    
+
     @include respond-to(980) {
       float: none;
-      position: static;
       text-align: center;
-      transform:none;}
+      
+      }
     
     &:last-child {
       float: right;
-          @include respond-to(980) {
+      
+      @include respond-to(980) {
+      
       float: none;
-      position: static;
       text-align: center;
-      transform:none;}
+      
+      }
+      
       a {
         padding:0 5px 0 0;
       }
@@ -261,8 +249,13 @@ a:hover {
         font-size:.7em;
         color:#999;
       }
-    }
-  }
+    }//right cell
+  }//cell
+}//footer
+
+.twitter-share-button {
+  vertical-align: middle;
 }
+
 @import "partials/_animations.scss";
 

@@ -24,17 +24,34 @@ $(".drunk").click(function() {
 	var classes = ['drunkvision1', 'drunkvision2', 'drunkvision3','drunkvision4', 'drunkvision5', 'drunkvision6','drunkvision7', 'drunkvision8', 'drunkvision9', 'drunkvision10'];
 	var randomnumber = Math.floor(Math.random() * classes.length); 
 
-    if($(this).text() === "sober up")
+    if($(this).text() === "<i class='fa fa-bell-slash-o'></i> sober up!")
     {
         $(".theframe").removeClass(classes.join(' '));
         $(this).html("<i class='fa fa-beer'></i> Drunk Vision");
     }
     else{
     $(".theframe").addClass(classes[randomnumber]);
-    $(this).text("sober up");
+    $(this).text("sober up!");
 }
 
 }); 
+
+// twitter button
+
+		window.twttr = ( function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
+				if (d.getElementById(id))
+					return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "https://platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js, fjs);
+				t._e = [];
+				t.ready = function(f) {
+					t._e.push(f);
+				};
+				return t;
+			}(document, "script", "twitter-wjs"));
 
 //google analytics
 

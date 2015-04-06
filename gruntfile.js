@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
 			css : {
 				files : ['sass/**/*.scss','!.sass-cache'],
-				tasks : ['sass', 'autoprefixer', 'penthouse'],
+				tasks : ['sass', 'autoprefixer'],
 				options : {
 					spawn : false,
 				}
