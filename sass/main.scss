@@ -28,11 +28,12 @@ a:hover {
 body {
   @include reset;
   font-family: $font;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 $text-shadow;
   overflow: hidden;
   background: $main-bg;
   font-size:1em;
   line-height:1.6em;
+  font-weight: 300;
 }
 
 img {
@@ -43,13 +44,13 @@ img {
 
 .header,
 .footer { 
-  background:$main-bg;
+  background:url("../images/dist/noise.png") $main-bg;
   color:$main-text-color;
   @include clearfix;
  }
  
 .header { 
-  border-bottom:5px solid darken($main-bg,15%);
+  border-bottom:5px solid $border-color;
   padding: 20px;
   
   @include respond-to(980) {padding:5px;}
@@ -73,11 +74,20 @@ img {
       float: left;
       font-family: $heading-font;
       margin: 0;
-      padding:20px 20px 0 10px; 
-      color:darken($main-bg,15%);
+      padding:15px 20px 0 10px; 
+      color:darken($main-bg,25%);
       font-size:2.2em;
+      line-height: .55em;
+      text-align: center;
       @include respond-to(990) {padding:5px 10px 0 10px}
       @include respond-to(700) {display: none;}
+      
+      span {
+        font-family: $font;
+        font-size:.4em ;
+        font-weight: 300;
+        color:#999
+      }
       
     }
   } //header left (logo)
@@ -119,7 +129,8 @@ img {
       border:0;
       color:#333;
       cursor:pointer;
-      background:lightgrey;
+      background:$submit-bg;
+      color:$submit-text-color;
       border-radius:3px;
     }//go button
   }//form
@@ -150,10 +161,10 @@ img {
 
 
 .drunk {
-  @include sassy-button("simple", 5px, 19px, darken(#C8F7C5,5%)) ;
+  @include sassy-button("simple", 5px, 19px, $drunk-button) ;
   position:relative;
   padding:20px;
-  color:$main-text-color;
+  color:$drunk-button-text;
   text-shadow: 0 1px 0 white;
   border-radius:10px;
   cursor:pointer;
@@ -192,7 +203,8 @@ img {
   
 
   &.active {
-   @include sassy-button("simple", 5px, 19px, red) ;
+   @include sassy-button("simple", 5px, 19px, $drunk-button-red);
+   color:$drunk-button-red-text;
    padding: 20px;
    @include respond-to(990) {padding:5px 10px;}
    @include respond-to(500) {display: block;}
@@ -213,7 +225,7 @@ img {
 }
 
 .footer {
-  border-top:5px solid darken($main-bg,15%);
+  border-top:5px solid $border-color;
   @include clearfix;
   padding:10px 20px;
   
@@ -247,7 +259,7 @@ img {
       span {
         display: inline-block;
         font-size:.7em;
-        color:#999;
+        color:$text-color-toned-down;
       }
     }//right cell
   }//cell
