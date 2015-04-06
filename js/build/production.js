@@ -31,9 +31,9 @@ $(".drunk").click(function() {
 
 });
 
-			if ($('.center input').val() != 'http://') {
-				$(".center").addClass("url-active");
-			}
+if ($('.center input').val() != 'http://') {
+	$(".center").addClass("url-active");
+}
 
 // twitter button
 
