@@ -43,11 +43,14 @@
 	</head>
 	<body>
 
-		<?php $src = (empty($_GET['url'])) ? 'http://bostonglobe.com' : addslashes(filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL)); ?>
+		<?php $src = (empty($_GET['url'])) ? 'http://' : addslashes(filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL)); ?>
+
 		<header class="header">
 			<div class="left">
 				<img src="images/dist/logo.png" class="logo">
-				<h1>Drunk UX<br><span>Is it Drunk Proof?</span></h1>
+				<h1>Drunk UX
+				<br>
+				<span>Is it Drunk Proof?</span></h1>
 			</div>
 			<div class="center">
 				<form method="get" action="" id="url-form">

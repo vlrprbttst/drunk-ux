@@ -26,6 +26,10 @@ $(".drunk").click(function() {
 
 });
 
+			if ($('.center input').val() != 'http://') {
+				$(".center").addClass("url-active");
+			}
+
 // twitter button
 
 window.twttr = ( function(d, s, id) {
