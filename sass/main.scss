@@ -58,7 +58,7 @@ img {
   .left {
     
     float: left;    
-    
+    @include clearfix;
     @include respond-to(980) {height:auto;}
     
     .logo {
@@ -67,7 +67,7 @@ img {
       float: left;
       display: block;
       
-      @include respond-to(980) {width:20px;}
+      @include respond-to(980) {width:20px;padding:0;vertical-align:bottom;display:inline}
     }
     
     h1 {
@@ -99,7 +99,7 @@ img {
     
     padding:0 0 0 20px;
     
-    @include respond-to(980) {padding: 0 0 0 9px;}
+    @include respond-to(980) {padding: 0 0 0 5px;}
     
     form {
       label {
@@ -117,12 +117,13 @@ img {
         display: inline-block;
         width:300px;
         @include respond-to(980) {
-         width: 220px;
+         width: 210px;
           
         }
       }//input
       
       button {
+        vertical-align: middle;
       box-shadow:none;
       padding:10px 20px;
       font-family:'courier';
