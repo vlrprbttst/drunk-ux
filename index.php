@@ -55,7 +55,7 @@
 			<div class="center">
 				<form method="get" action="" id="url-form">
 					<!-- <label for="url"><i class="fa fa-arrow-circle-o-down"></i> Insert URL here:</label> -->
-
+					<div class="alert-url"><img src="images/dist/bell.png"> Insert a URL and click <b>GO</b></div>
 					<input id="url" type="text" name="url" placeholder="Enter any URL" value="<?php echo $src; ?>" />
 					<button id="url-submit">
 						Go
@@ -63,6 +63,7 @@
 				</form>
 			</div>
 			<div class="right">
+				<div class="alert-btn"><img src="images/dist/glass.png"> Hit This!</div>
 				<div class="drunk">
 					drunk vision
 				</div>

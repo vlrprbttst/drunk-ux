@@ -101,43 +101,43 @@ img {
     padding:15px 0 0 0; 
     position: relative;
     
-    &.url-active{ &:before,&:after {display:none}}
+    &.url-active{ .alert-url {opacity:0;transition:all .75s cubic-bezier(0.645, 0.045, 0.355, 1)}}
     
     
-    &:before {
-      width: 0;
-height: 0;
-border-style: solid;
-border-width: 0 20px 20px 20px;
-border-color: transparent transparent $alert-bg transparent;
-
-      z-index: 9999;
-      position: absolute;
-      content:"";
-        bottom: -25px;
-      left: 50%;
-      transform:translateX(-50%);
-     
-     
-    }
-    &:after {
+    .alert-url {
       z-index: 999;
       position: absolute;
-      content:"Enter a URL here and click GO";
+      
       bottom: -80px;
       left: 50%;
       transform:translateX(-50%);
-      background:url("../images/dist/bell.png") 15px center no-repeat $alert-bg;
-      background-size:25px auto;
-      padding: 20px 20px 20px 40px;
+      background:$alert-bg;
+      padding: 20px;
       width:300px;
       height:auto;
       text-align: center;
       box-shadow:0 0 10px rgba(0,0,0,.2);
   border-radius: 4px;
   color: #8a6d3b;
-
+  
+  img {width:25px}
+  
+  &:before {
+      
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 20px 20px 20px;
+      border-color: transparent transparent $triangle-bg transparent;
+      z-index: 9999;
+      position: absolute;
+      content:"";
+      top: -20px;
+      left: 50%;
+      transform:translateX(-50%);
     }
+  }
+    
     
     @include respond-to(980) {padding: 0 0 0 5px;}
     
@@ -199,41 +199,48 @@ border-color: transparent transparent $alert-bg transparent;
       clear: left;
     }
     
+    .alert-btn {display:none}
+    
     &.godrunk {
-        &:before {
-      width: 0;
-height: 0;
-border-style: solid;
-border-width: 0 20px 20px 20px;
-border-color: transparent transparent $alert-bg transparent;
 
-      z-index: 9999;
-      position: absolute;
-      content:"";
-        bottom: -25px;
-      left: 50%;
-      transform:translateX(-50%);
-     
-     
-    }
-    &:after {
+    .alert-btn {
+      display:block;
       z-index: 999;
       position: absolute;
       content:"Hit This!";
       bottom: -80px;
       left: 50%;
       transform:translateX(-50%);
-      background:url("../images/dist/glass.png") 15px center no-repeat $alert-bg;
-      background-size:25px auto;
-      padding: 20px 20px 20px 40px;
-      width:auto;
+      background:$alert-bg;
+      
+      padding: 20px;
+      width:150px;
       height:auto;
       text-align: center;
-      box-shadow:0 0 10px rgba(0,0,0,.5);
+      box-shadow:0 0 10px rgba(0,0,0,.2);
   border-radius: 4px;
   color: #8a6d3b;
+  
+  img {width: 25px; }
+  
+          &:before {
+      width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 20px 20px 20px;
+border-color: transparent transparent $triangle-bg transparent;
 
+      z-index: 9999;
+      position: absolute;
+      content:"";
+        top: -20px;
+      left: 50%;
+      transform:translateX(-50%);
+     
+     
     }
+
+    }//alert btn
     }//godrunk
     
   }//right

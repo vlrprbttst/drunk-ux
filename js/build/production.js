@@ -40,8 +40,15 @@ $( ".center input" ).focus(function() {
  $(".center").addClass("url-active");
 });
 
+$(".alert-url").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){ 
+	$(".alert-url").css("display","none");
+	
+	});
+
+
 if (window.location.href.indexOf("http%") > -1) {
     $(".right").addClass("godrunk");
+    
 }
 
 // twitter button
