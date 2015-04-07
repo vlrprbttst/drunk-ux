@@ -101,14 +101,14 @@ img {
     padding:15px 0 0 0; 
     position: relative;
     
-    &.url-active{ .alert-url {opacity:0;transition:all .75s cubic-bezier(0.645, 0.045, 0.355, 1)}}
+    &.url-active{ .alert-url {opacity:0;bottom:-100px;transition:all .25s cubic-bezier(0.645, 0.045, 0.355, 1)}}
     
     
     .alert-url {
       z-index: 999;
       position: absolute;
       
-      bottom: -80px;
+      bottom: -90px;
       left: 50%;
       transform:translateX(-50%);
       background:$alert-bg;
@@ -120,7 +120,7 @@ img {
   border-radius: 4px;
   color: #8a6d3b;
   
-  img {width:25px}
+  img {width:25px;margin: 0 5px 0 0;}
   
   &:before {
       

@@ -11,7 +11,7 @@ Check it out live @ [drunkuserexperience.com](http://drunkuserexperience.com)
 
 #Compatibility
 
-The _drunk effect_ relies heavily on css `transform` and `filter` properties, therefore this website is best experienced on latest __Chrome__ and __Safari__ browsers (both Desktop and Mobile).
+The _drunk effect_ relies heavily on css `transform` and `filter` properties, therefore this website is best experienced on latest __Chrome__, __Firefox__ and __Safari__ browsers (both Desktop and Mobile).
 
 #Credits
 
