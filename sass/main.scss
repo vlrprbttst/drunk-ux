@@ -111,7 +111,8 @@ img {
       bottom: -90px;
       left: 50%;
       transform:translateX(-50%);
-      background:$alert-bg;
+      background:$triangle-bg;
+      background:$alert-bg ;
       padding: 20px;
       width:300px;
       height:auto;
@@ -211,6 +212,7 @@ img {
       bottom: -80px;
       left: 50%;
       transform:translateX(-50%);
+      background:$triangle-bg;
       background:$alert-bg;
       
       padding: 20px;
