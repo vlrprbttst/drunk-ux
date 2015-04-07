@@ -54,7 +54,7 @@
 			</div>
 			<div class="center">
 				<form method="get" action="" id="url-form">
-					<label for="url"><i class="fa fa-arrow-circle-o-down"></i> Insert URL here:</label>
+					<!-- <label for="url"><i class="fa fa-arrow-circle-o-down"></i> Insert URL here:</label> -->
 
 					<input id="url" type="text" name="url" placeholder="Enter any URL" value="<?php echo $src; ?>" />
 					<button id="url-submit">
@@ -64,7 +64,7 @@
 			</div>
 			<div class="right">
 				<div class="drunk">
-					<i class="fa fa-beer"></i> drunk vision
+					drunk vision
 				</div>
 			</div>
 		</header>

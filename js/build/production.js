@@ -18,12 +18,13 @@ $(window).resize(function() {
 
 $(".drunk").click(function() {
 	$(".drunk").toggleClass("active");
+	$(".right").removeClass("godrunk");
 	var classes = ['drunkvision1', 'drunkvision2', 'drunkvision3', 'drunkvision4', 'drunkvision5', 'drunkvision6', 'drunkvision7', 'drunkvision8', 'drunkvision9', 'drunkvision10'];
 	var randomnumber = Math.floor(Math.random() * classes.length);
 
 	if ($(this).text() === "sober up!") {
 		$(".theframe").removeClass(classes.join(' '));
-		$(this).html("<i class='fa fa-beer'></i> Drunk Vision");
+		$(this).html("Drunk Vision");
 	} else {
 		$(".theframe").addClass(classes[randomnumber]);
 		$(this).text("sober up!");
@@ -38,6 +39,10 @@ if ($('.center input').val() != 'http://') {
 $( ".center input" ).focus(function() {
  $(".center").addClass("url-active");
 });
+
+if (window.location.href.indexOf("http%") > -1) {
+    $(".right").addClass("godrunk");
+}
 
 // twitter button
 

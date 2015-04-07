@@ -30,7 +30,8 @@ body {
   font-family: $font;
   text-shadow: 0 1px 0 $text-shadow;
   overflow: hidden;
-  background: url('../images/dist/noise2.png') $main-bg; 
+  background: url('../images/dist/ricepaper.png') $main-bg; 
+  background-size:250px;
   font-size:1em;
   line-height:1.6em;
   font-weight: 300;
@@ -97,7 +98,7 @@ img {
   .center {
     width: auto;
     float: left;
-    padding:0 0 0 20px;
+    padding:15px 0 0 0; 
     position: relative;
     
     &.url-active{ &:before,&:after {display:none}}
@@ -108,7 +109,7 @@ img {
 height: 0;
 border-style: solid;
 border-width: 0 20px 20px 20px;
-border-color: transparent transparent lighten(#Ff0,35%) transparent;
+border-color: transparent transparent $alert-bg transparent;
 
       z-index: 9999;
       position: absolute;
@@ -122,17 +123,20 @@ border-color: transparent transparent lighten(#Ff0,35%) transparent;
     &:after {
       z-index: 999;
       position: absolute;
-      content:"1) enter a URL here and click GO";
+      content:"Enter a URL here and click GO";
       bottom: -80px;
       left: 50%;
       transform:translateX(-50%);
-      background:lighten(#Ff0,35%);
-      padding:20px 10px;
+      background:url("../images/dist/bell.png") 15px center no-repeat $alert-bg;
+      background-size:25px auto;
+      padding: 20px 20px 20px 40px;
       width:300px;
       height:auto;
       text-align: center;
-      box-shadow:0 0 10px rgba(0,0,0,.5);
-      border-radius:5px;
+      box-shadow:0 0 10px rgba(0,0,0,.2);
+  border-radius: 4px;
+  color: #8a6d3b;
+
     }
     
     @include respond-to(980) {padding: 0 0 0 5px;}
@@ -179,6 +183,7 @@ border-color: transparent transparent lighten(#Ff0,35%) transparent;
     @include clearfix;
     float: right;
     padding: 0;
+    position: relative;
     
      @include respond-to(990) {
       text-align: center;
@@ -193,6 +198,44 @@ border-color: transparent transparent lighten(#Ff0,35%) transparent;
       width: 100%;
       clear: left;
     }
+    
+    &.godrunk {
+        &:before {
+      width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 20px 20px 20px;
+border-color: transparent transparent $alert-bg transparent;
+
+      z-index: 9999;
+      position: absolute;
+      content:"";
+        bottom: -25px;
+      left: 50%;
+      transform:translateX(-50%);
+     
+     
+    }
+    &:after {
+      z-index: 999;
+      position: absolute;
+      content:"Hit This!";
+      bottom: -80px;
+      left: 50%;
+      transform:translateX(-50%);
+      background:url("../images/dist/glass.png") 15px center no-repeat $alert-bg;
+      background-size:25px auto;
+      padding: 20px 20px 20px 40px;
+      width:auto;
+      height:auto;
+      text-align: center;
+      box-shadow:0 0 10px rgba(0,0,0,.5);
+  border-radius: 4px;
+  color: #8a6d3b;
+
+    }
+    }//godrunk
+    
   }//right
 }//header
 
