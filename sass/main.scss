@@ -30,7 +30,7 @@ body {
   font-family: $font;
   text-shadow: 0 1px 0 $text-shadow;
   overflow: hidden;
-  background: $main-bg;
+  background: url('../images/dist/noise2.png') $main-bg; 
   font-size:1em;
   line-height:1.6em;
   font-weight: 300;

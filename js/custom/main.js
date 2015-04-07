@@ -30,6 +30,10 @@ if ($('.center input').val() != 'http://') {
 	$(".center").addClass("url-active");
 }
 
+$( ".center input" ).focus(function() {
+ $(".center").addClass("url-active");
+});
+
 // twitter button
 
 window.twttr = ( function(d, s, id) {
