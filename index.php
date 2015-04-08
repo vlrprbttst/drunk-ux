@@ -84,7 +84,7 @@
 				href="http://www.drunkuserexperience.com"
 				data-url="http://www.drunkuserexperience.com"
 				data-via="vlrprbttst"
-				data-text="Test your website's UX behind drunk eyes #dontdrinkandbrowse #drunkuserexperience #ux #usability- "
+				data-text="Is your website drunk proof? #dontdrinkandbrowse #drunkuserexperience  #usability #ux - "
 				data-count="none"> Tweet </a>
 
 				<span><i class="fa fa-ban"></i> Don't Drink & Browse ;)</span>
