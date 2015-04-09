@@ -52,7 +52,7 @@ if (window.location.href.indexOf("http%") > -1) {
 
 setInterval(function(){ 
     
-    var forbiddenSites = ['google','facebook','linkedin'],
+    var forbiddenSites = ['google','facebook','linkedin','pinterest','instagram','twitter','vk','youtube','yahoo'],
         containWord = false,
         valInput = $('#url').val();
     
@@ -62,15 +62,15 @@ setInterval(function(){
         }
     }    
 if (containWord) {
-	$('body').addClass('forbidden');
+	$('#alert-forbidden').addClass('forbidden');
 }
     
     else {
-    $('body').removeClass('forbidden');
+    $('#alert-forbidden').removeClass('forbidden');
     }
     
 
-}, 500);
+}, 100);
 
 // twitter button
 

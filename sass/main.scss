@@ -109,7 +109,6 @@ img {
     .alert-url {
       z-index: 999;
       position: absolute;
-      
       bottom: -90px;
       left: 50%;
       transform:translateX(-50%);
@@ -139,6 +138,27 @@ img {
       left: 50%;
       transform:translateX(-50%);
     }
+  }//alert url
+  
+  #alert-forbidden {
+    display:none;
+    opacity:0;
+    transition:all .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    
+   &.forbidden {
+     @extend .alert-url;
+     background:$forbidden-bg;
+     display: block;
+     opacity:1 !important;
+     color:$drunk-button-red-text;
+     text-shadow:0 1px 0 rgba(0,0,0,.2);
+     bottom: -150px !important;
+     
+     &:before {
+        @extend .alert-url:before;
+        border-color: transparent transparent $forbidden-triangle-bg transparent;
+     }
+   }
   }
     
     

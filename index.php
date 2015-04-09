@@ -56,6 +56,7 @@
 				<form method="get" action="" id="url-form">
 					<!-- <label for="url"><i class="fa fa-arrow-circle-o-down"></i> Insert URL here:</label> -->
 					<div class="alert-url"><img src="images/dist/bell.png"> Insert a URL and click <b>GO</b></div>
+					<div id="alert-forbidden"><i class="fa fa-exclamation-triangle"></i> Please don't try to drunk test websites like <b>Google</b>, <b>Facebook</b>, <b>LinkedIn</b> etc. These websites cannot be displayed in an <i>iframe!</i></div>
 					<input id="url" type="text" name="url" placeholder="Enter any URL" value="<?php echo $src; ?>" />
 					<button id="url-submit">
 						Go
