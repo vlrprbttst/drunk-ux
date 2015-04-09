@@ -224,7 +224,8 @@ img {
     
       .drunk {
         @include sassy-button("simple", 5px, 19px, $drunk-button) ;
-        display:none;
+        opacity:0;
+        transform:scale(1.2);
         position:relative;
         padding:20px;
         color:$drunk-button-text;
@@ -232,6 +233,7 @@ img {
         border-radius:10px;
         cursor:pointer;
         text-transform: uppercase;
+        transition:transform 1.5s ease, opacity 0.3s ease 1s;
       
         @include respond-to(990) {
       
@@ -281,6 +283,8 @@ img {
       
       &.godrunk {
         .drunk {
+          opacity:1;
+          transform:scale(1);
           display: inline-block;
           @include respond-to(990) {
          display: inline-block;}
