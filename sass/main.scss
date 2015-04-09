@@ -222,110 +222,77 @@ img {
       clear: left;
     }
     
-    .alert-btn {display:none}
-    
-    &.godrunk {
-
-    .alert-btn {
-      display:block;
-      z-index: 999;
-      position: absolute;
-      content:"Hit This!";
-      bottom: -80px;
-      left: 50%;
-      transform:translateX(-50%);
-      background:$triangle-bg;
-      background:$alert-bg;
+      .drunk {
+        @include sassy-button("simple", 5px, 19px, $drunk-button) ;
+        display:none;
+        position:relative;
+        padding:20px;
+        color:$drunk-button-text;
+        text-shadow: 0 1px 0 white;
+        border-radius:10px;
+        cursor:pointer;
+        text-transform: uppercase;
       
-      padding: 20px;
-      width:150px;
-      height:auto;
-      text-align: center;
-      box-shadow:0 0 10px rgba(0,0,0,.2);
-  border-radius: 4px;
-  color: #8a6d3b;
-  
-  img {width: 25px; }
-  
-          &:before {
-      width: 0;
-height: 0;
-border-style: solid;
-border-width: 0 20px 20px 20px;
-border-color: transparent transparent $triangle-bg transparent;
-
-      z-index: 9999;
-      position: absolute;
-      content:"";
-        top: -20px;
-      left: 50%;
-      transform:translateX(-50%);
-     
-     
-    }
-
-    }//alert btn
-    }//godrunk
-    
+        @include respond-to(990) {
+      
+         float: right; 
+         padding:5px 10px;
+         margin:0 0 0 20px;  
+         
+        }
+      
+        @include respond-to(500) {
+         
+         float: none; 
+         padding:10px;
+         margin:0; 
+         
+        }
+        
+        &:after {
+          width: 150px;
+          height: 50px;
+          background:url("../images/dist/sign.png") center center no-repeat;
+          background-size:100% auto;
+          content:"";
+          position: absolute;
+          left:-160px;
+          top: 0;
+          opacity:.6;
+          
+          @include respond-to(990) {display: none;}
+          
+        }
+        
+      
+        &.active {
+         @include sassy-button("simple", 5px, 19px, $drunk-button-red);
+         color:$drunk-button-red-text;
+         padding: 20px;
+         @include respond-to(990) {padding:5px 10px;}
+         @include respond-to(500) {display: block;}
+          
+          &:after {
+          display: none;
+          
+        }
+        }
+      } //drunk button
+      
+      &.godrunk {
+        .drunk {
+          display: inline-block;
+          @include respond-to(990) {
+         display: inline-block;}
+         @include respond-to(500) {
+         display: block;}
+         
+        }
+      }
   }//right
 }//header
 
 
-.drunk {
-  @include sassy-button("simple", 5px, 19px, $drunk-button) ;
-  position:relative;
-  padding:20px;
-  color:$drunk-button-text;
-  text-shadow: 0 1px 0 white;
-  border-radius:10px;
-  cursor:pointer;
-  text-transform: uppercase;
-
-  @include respond-to(990) {
-   display: inline-block;
-   float: right; 
-   padding:5px 10px;
-   margin:0 0 0 20px;  
-   
-  }
-
-  @include respond-to(500) {
-   display: block;
-   float: none; 
-   padding:10px;
-   margin:0; 
-   
-  }
-  
-  &:after {
-    width: 150px;
-    height: 50px;
-    background:url("../images/dist/sign.png") center center no-repeat;
-    background-size:100% auto;
-    content:"";
-    position: absolute;
-    left:-160px;
-    top: 0;
-    opacity:.6;
-    
-    @include respond-to(990) {display: none;}
-    
-  }
-  
-
-  &.active {
-   @include sassy-button("simple", 5px, 19px, $drunk-button-red);
-   color:$drunk-button-red-text;
-   padding: 20px;
-   @include respond-to(990) {padding:5px 10px;}
-   @include respond-to(500) {display: block;}
-    
-    &:after {
-    display: none;
-    
-  }
-  }
-}
 
 .theframe {
   width: 100%;

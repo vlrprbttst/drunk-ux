@@ -10,12 +10,15 @@ navHeight();
 $(window).resize(function() {
 	navHeight();
 });
+	var classes = ['drunkvision1', 'drunkvision2', 'drunkvision3', 'drunkvision4', 'drunkvision5', 'drunkvision6', 'drunkvision7', 'drunkvision8', 'drunkvision9', 'drunkvision10'];
+	var randomnumber = Math.floor(Math.random() * classes.length);
 
 $(".drunk").click(function() {
 	$(".drunk").toggleClass("active");
-	$(".right").removeClass("godrunk");
+	
 	var classes = ['drunkvision1', 'drunkvision2', 'drunkvision3', 'drunkvision4', 'drunkvision5', 'drunkvision6', 'drunkvision7', 'drunkvision8', 'drunkvision9', 'drunkvision10'];
 	var randomnumber = Math.floor(Math.random() * classes.length);
+	
 
 	if ($(this).text() === "sober up!") {
 		$(".theframe").removeClass(classes.join(' '));
@@ -29,6 +32,7 @@ $(".drunk").click(function() {
 
 if ($('#url').val() != 'http://') {
 	$(".center").addClass("url-active");
+	$(".theframe").addClass(classes[randomnumber]);
 }
 
 $("#url").focus(function() {
@@ -42,12 +46,16 @@ $(".alert-url").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransit
 
 if (window.location.href.indexOf("http%") > -1) {
 	$(".right").addClass("godrunk");
+	$(".drunk").addClass("active");
+	$(".drunk").html("sober up!");
+	
+	
 
 }
 
 setInterval(function(){ 
     
-    var forbiddenSites = ['google','facebook','linkedin','pinterest','instagram','twitter','vk','youtube','yahoo'],
+    var forbiddenSites = ['google','facebook','linkedin','pinterest','instagram','twitter','vk','youtube','yahoo','baidu','amazon','taobao','qq.co','live.com','sina.com','weibo','ebay','tmall'],
         containWord = false,
         valInput = $('#url').val();
     
