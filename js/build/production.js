@@ -38,6 +38,7 @@ $(".drunk").click(function() {
 if ($('#url').val() != 'http://') {
 	$(".center").addClass("url-active");
 	$(".theframe").addClass(classes[randomnumber]);
+	$(".theframe").css("opacity","1");
 }
 
 $("#url").focus(function() {
