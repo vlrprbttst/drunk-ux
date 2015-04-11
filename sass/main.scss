@@ -304,8 +304,14 @@ img {
   vertical-align: bottom;
   position:relative;
   -webkit-overflow-scrolling:touch;
+  opacity:0;
 
+&[class*="drunkvision"] {
+  opacity:1
 }
+}
+
+
 
 .footer {
   border-top:5px solid $border-color;
