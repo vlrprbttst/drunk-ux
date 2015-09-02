@@ -107,7 +107,6 @@ window.twttr = ( function(d, s, id) {
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-42737159-1', 'auto');
-  ga('set', 'anonymizeIp', true);
+  ga('create', 'UA-67094117-1', 'auto');
   ga('send', 'pageview');
 
